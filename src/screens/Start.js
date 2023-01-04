@@ -10,9 +10,9 @@ const StartScreen = ({navigation}) => {
     setTimeout(async () => {
       const name = await AsyncStorage.getItem('username');
       if (name == 'admin' || name == 'client') {
-        navigation.replace('MyStack');
+        navigation.replace('BottomAdminScreens');
       } else if (name == 'salesman') {
-        navigation.replace('MyStack2');
+        navigation.replace('BottomSalesmanScreens');
       } else {
         navigation.navigate('Login');
       }

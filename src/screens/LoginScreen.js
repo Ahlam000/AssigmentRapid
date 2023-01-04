@@ -1,6 +1,7 @@
 import AsyncStorage from '@react-native-community/async-storage';
 import React, {useState} from 'react';
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
+import Button from '../components/Button';
 import Input from '../components/Input';
 
 const LoginScreen = ({route, navigation}) => {
@@ -16,11 +17,11 @@ const LoginScreen = ({route, navigation}) => {
     if (name == 'admin' || name == 'client') {
       setNameErr('');
       const username = await AsyncStorage.setItem('username', name);
-      navigation.replace('MyStack');
+      navigation.replace('BottomAdminScreens');
     } else if (name == 'salesman') {
       setNameErr('');
       const username = await AsyncStorage.setItem('username', name);
-      navigation.replace('MyStack2');
+      navigation.replace('BottomSalesmanScreens');
     } else {
       setNameErr('');
       alert('No matching user found! Please enter correct details');
@@ -44,12 +45,7 @@ const LoginScreen = ({route, navigation}) => {
         />
         <Text style={styles.errorText}>{nameErr}</Text>
       </View>
-      <TouchableOpacity
-        activeOpacity={1}
-        style={styles.button}
-        onPress={() => onLogin()}>
-        <Text style={styles.buttonText}>Login</Text>
-      </TouchableOpacity>
+      <Button title="Login" onPress={() => onLogin()} />
     </View>
   );
 };
@@ -71,18 +67,6 @@ const styles = StyleSheet.create({
     fontSize: 26,
     fontWeight: '800',
     color: 'black',
-    textAlign: 'center',
-  },
-  button: {
-    paddingHorizontal: 40,
-    paddingVertical: 16,
-    borderRadius: 15,
-    backgroundColor: 'black',
-  },
-  buttonText: {
-    fontSize: 16,
-    fontWeight: '600',
-    color: 'white',
     textAlign: 'center',
   },
 });

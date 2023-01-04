@@ -1,11 +1,22 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
 
 const ManageScreen = () => {
   return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text style={{color: 'black', fontSize: 16}}>Hello Manage Screen</Text>
+    <View style={styles.container}>
+      <Text style={styles.text}>Hello Manage Screen</Text>
     </View>
   );
 };
 export default ManageScreen;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  text: {
+    color: 'black',
+    fontSize: 16,
+  },
+});

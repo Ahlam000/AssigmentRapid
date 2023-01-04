@@ -34,13 +34,13 @@ export const BottomNavigation = () => {
           options={{headerShown: false}}
         />
         <Stack.Screen
-          name="MyStack"
-          component={MyStack}
+          name="BottomAdminScreens"
+          component={BottomAdminScreens}
           options={{headerShown: false}}
         />
         <Stack.Screen
-          name="MyStack2"
-          component={MyStack2}
+          name="BottomSalesmanScreens"
+          component={BottomSalesmanScreens}
           options={{headerShown: false}}
         />
       </Stack.Navigator>
@@ -48,7 +48,7 @@ export const BottomNavigation = () => {
   );
 };
 
-export function MyStack() {
+export function BottomAdminScreens() {
   return (
     <Tab.Navigator
       firstRoute="Home"
@@ -146,7 +146,7 @@ export function MyStack() {
   );
 }
 
-export function MyStack2() {
+export function BottomSalesmanScreens() {
   return (
     <Tab.Navigator
       firstRoute="Home"

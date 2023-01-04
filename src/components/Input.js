@@ -5,7 +5,6 @@ const styles = StyleSheet.create({
   container: {
     height: 63,
     position: 'relative',
-    // marginBottom:-10
   },
   labelContainer: {
     position: 'absolute',
@@ -72,7 +71,6 @@ const Input = ({label, style, ...props}) => {
           setColor(false);
           props.onBlur;
           props.setError('');
-          console.log('outlinee innnn');
         }}
         numberOfLines={props.multiline ? 6 : 1}
         multiline={props.multiline ? true : false}
