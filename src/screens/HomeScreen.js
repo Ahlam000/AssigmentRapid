@@ -13,7 +13,7 @@ const HomeScreen = ({navigation}) => {
         activeOpacity={1}
         style={styles.button}
         onPress={() => logout()}>
-        <Text style={styles.buttonText}>Signout</Text>
+        <Text style={styles.buttonText}>Logout</Text>
       </TouchableOpacity>
     </View>
   );

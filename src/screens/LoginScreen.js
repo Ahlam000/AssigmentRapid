@@ -9,7 +9,6 @@ const LoginScreen = ({route, navigation}) => {
   const [nameErr, setNameErr] = useState('');
 
   const onLogin = async () => {
-    //    const username=  await AsyncStorage.setItem('username',name)
     if (name.trim() == '' || name == '') {
       setNameErr('please enter your  username');
       return;
@@ -49,7 +48,7 @@ const LoginScreen = ({route, navigation}) => {
         activeOpacity={1}
         style={styles.button}
         onPress={() => onLogin()}>
-        <Text style={styles.buttonText}>Signin</Text>
+        <Text style={styles.buttonText}>Login</Text>
       </TouchableOpacity>
     </View>
   );
@@ -57,8 +56,6 @@ const LoginScreen = ({route, navigation}) => {
 export default LoginScreen;
 const styles = StyleSheet.create({
   container: {
-    // flex: 1,
-    // paddingHorizontal: 24,
     width: '60%',
     marginTop: 20,
     backgroundColor: 'white',
